@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+	  #can{
+	  	position: absolute;
+	  	left: 50%;
+	  	top: 50%;
+	  	margin-left:-200px;
+	  	margin-top: -100px;
+	  }
+	</style>
+</head>
+<body> 
+	<canvas id="can" style="width:400px;height:200px"></canvas>
+
+	<script type="text/javascript">
+       var canvas=document.getElementById("can");
+       canvas.width=400;
+       canvas.height=200;
+       var context=canvas.getContext('2d');
+       context.fillStyle="#ccc";
+       context.fillRect(0,0,400,200);
+       context.fillStyle="#fc0";
+       context.beginPath();
+       context.arc(0,0,50,0,Math.PI*0.5,false);
+       context.lineTo(0,0);
+       context.closePath();
+       context.fill();
+       context.beginPath();
+       context.arc(400,200,50,Math.PI,Math.PI*1.5,false);
+       context.lineTo(400,200);
+       context.closePath();
+       context.fill();
+	</script>
+</body>
+</html>
